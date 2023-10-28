@@ -1,17 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
     <head>
-        <title>TEST_PAGE</title>
-        <meta charset="utf-8">
+        <title>TEST</title>
     </head>
     <body>
-        <div class="index">
-            <a href="./games/DomPazzle.html">パズルゲーム</a>
-        </div>
-        <div class="main">
-            メイン画面
-        </div>
-        <iv class="ad">
-            広告画面
-        </div>
+        <form name="myform">
+            <input name="myfile" type="file" id="input" multiple />
+            <output name="download" type="file" id="output" multiple />
+        </form>
+
+        <script>
+            var form = document.forms.myform;
+            form.myfile.addEventListener('change', function(e){
+                var result = e.target.files;
+                console.log(result);
+            })
+            from.download.addEventListener('cnage', function(e){
+                const blob = new Blob(['こんにちは'],{"type":"text/plain"});
+            })
+        </script>
     </body>
+
 </html>
