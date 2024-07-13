@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>TEST</title>
+    </head>
+    <body>
+        <form name="myform">
+            <input name="myfile" type="file" id="input" multiple />
+            <output name="download" type="file" id="output" multiple />
+        </form>
+
+        <script>
+            var form = document.forms.myform;
+            form.myfile.addEventListener('change', function(e){
+                var result = e.target.files;
+                console.log(result);
+            })
+            from.download.addEventListener('cnage', function(e){
+                const blob = new Blob(['こんにちは'],{"type":"text/plain"});
+            })
+        </script>
+    </body>
+
+</html>
